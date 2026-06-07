@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #fcf4f4;
+  --color-primary-100: #f7e6e6;
+  --color-primary-200: #eed0d0;
+  --color-primary-300: #dfb0b0;
+  --color-primary-400: #c98585;
+  --color-primary-500: #7A1C1C;
+  --color-primary-600: #6A1414;
+  --color-primary-700: #590F0F;
+  --color-primary-800: #4A0E0E;
+  --color-primary-900: #3D0909;
+
+  --color-accent-50: #faf8f5;
+  --color-accent-100: #f3edd9;
+  --color-accent-200: #e7daaf;
+  --color-accent-300: #d6c07d;
+  --color-accent-400: #c5a452;
+  --color-accent-500: #A3704C;
+  --color-accent-600: #8B5E3C;
+  --color-accent-700: #6d472d;
+  --color-accent-800: #4f3320;
+  --color-accent-900: #332115;
+
+  --color-charcoal-50: #f9f9f9;
+  --color-charcoal-100: #f1f1f1;
+  --color-charcoal-200: #e1e1e1;
+  --color-charcoal-300: #d1d1d1;
+  --color-charcoal-500: #666666;
+  --color-charcoal-800: #1C1C1C;
+  --color-charcoal-900: #111111;
+  
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --primary: #7A1C1C;
+  --primary-dark: #4A0E0E;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Utilities */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.glassmorphism-dark {
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Linear Progress Bar Animation */
+@keyframes loading-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-progress {
+  animation: loading-progress 2s infinite linear;
+}
+
+/* Glow effects */
+.glow-maroon {
+  box-shadow: 0 0 25px rgba(122, 28, 28, 0.15);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px rgba(163, 112, 76, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7A1C1C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4A0E0E;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
